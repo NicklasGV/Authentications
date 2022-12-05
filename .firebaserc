@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "management-auth-4dd9c": {
+      "hosting": {
+        "AuthApp": [
+          "management-auth-4dd9c"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "management-auth-4dd9c"
+  }
+}
