@@ -14,7 +14,7 @@
                         </div>
                         <div class="mb-3">
                           <label for="exampleInputPassword1" class="form-label">Password</label>
-                          <input type="password" class="form-control" name="password" [(ngModel)]="user.password">
+                          <input type="password" class="form-control" name="password" [(ngModel)]="user.password" (keyup.enter)="login()">
                         </div>
                         <button type="button" class="btn btn-info" (click)="login()">Login</button>
                         <div class="row">
@@ -25,14 +25,22 @@
                                 <a href="forgot-password" class="text-dark" style="text-decoration: none;">Forgot Password?</a>
                             </div>
                         </div>
-                        <div class="row mt-2">
-                            <a (click)="signInWithGoogle()" style="text-decoration: none;">
-                                <div class="card shadow text-center">
-                                    <div class="card-body">
-                                        <img src="../../../assets/Google__G__Logo.png" alt=""  height="24px" width="24px"> Sign in with Google
-                                    </div>
-                                </div>
+                        <div class="mt-2">
+                            <span class="buttons" (click)="signInWithGoogle()">
+                                <a class="align-center">
+                                    <img src="../../../assets/Google__G__Logo.png" alt=""  class="img" height="24px" width="24px">
+                                </a>
+                            </span>
+                            <span class="buttons" (click)="signInWithFacebook()">
+                                <a class="align-center">
+                                <img src="../../../assets/facebook.png" alt="" class="img" height="24px" width="24px" >
                             </a>
+                            </span>
+                            <span class="buttons" (click)="signInWithGithub()">
+                                <a class="align-center">
+                                <img src="../../../assets/Github.png" alt="" class="img" height="24px" width="24px" >
+                            </a>
+                            </span>
                         </div>
                       </form>
                 </div>

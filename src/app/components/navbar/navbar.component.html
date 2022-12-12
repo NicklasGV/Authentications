@@ -1,0 +1,110 @@
+<!-- *ngIf="isLoggedIn$ | async as isLoggedIn" -->
+<!-- <nav class="navbar navbar-expand-lg bg-light" onloadstart="checkLogin()">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/dashboard">
+            <img src="../../../assets/Angular.png" alt="Bootstrap" width="30" height="30">
+          </a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-success" type="submit">Search</button>
+        </form>
+        <button type="button" class="btn btn-info" style="float: right;" (click)="register()" *ngIf="isLoggedIn == true">
+          Logout
+        </button>
+      </div>
+    </div>
+  </nav> -->
+
+
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-mdb-toggle="collapse"
+      data-mdb-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <a class="navbar-brand" href="#">
+        <img
+          src="../../../assets/Angular.png"
+          height="25"
+          alt="Angular"
+        />
+      </a>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="/dashboard">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/dashboard" (click)="WIP()">WIP</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/dashboard" (click)="WIP()">WIP</a>
+        </li>
+      </ul>
+    </div>
+    <div class="mb-7">
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-success" type="submit">Search</button>
+      </form>
+    </div>
+    <div class="d-flex align-items-center">
+      <div class="dropdown">
+        <a
+
+          class="dropdown-toggle d-flex align-items-center hidden-arrow"
+          id="navbarDropdownMenuAvatar"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <img
+            src="../../../assets/Account.png"
+            class="rounded-circle"
+            height="25"
+          />
+        </a>
+        <ul
+          class="dropdown-menu dropdown-menu-end"
+          aria-labelledby="navbarDropdownMenuAvatar"
+        >
+        <li>
+          <a class="dropdown-item" (click)="register()" *ngIf="isLoggedIn == true">Logout</a>
+        </li>
+          <!-- <li>
+            <a class="dropdown-item" href="#">My profile</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Settings</a>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,53 @@
+<div *ngIf="hero">
+    <mat-card>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Name</mat-label>
+          <input matInput [(ngModel)]="hero.name" placeholder="Name" />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>First Name</mat-label>
+          <input matInput [(ngModel)]="hero.firstName" placeholder="First Name" />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Last Name</mat-label>
+          <input matInput [(ngModel)]="hero.lastName" placeholder="Last Name" />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Place</mat-label>
+          <input matInput [(ngModel)]="hero.place" placeholder="Place" />
+        </mat-form-field>
+      </div>
+      <button
+        mat-fab
+        color="primary"
+        aria-label="Example icon button with a heart icon"
+        (click)="updateHero(hero);reloadCurrentPage()"
+        *ngIf="hero.id"
+      >
+      Save
+      </button>
+      <button
+        mat-fab
+        color="warn"
+        (click)="deleteHero(hero);reloadCurrentPage()"
+        *ngIf="hero.id"
+      >
+        Delete
+      </button>
+      <button
+        mat-fab
+        color="Primary"
+        (click)="createHero(hero);reloadCurrentPage()"
+        *ngIf="!hero.id"
+      >
+        Create
+      </button>
+    </mat-card>
+  </div>

@@ -1,3 +1,4 @@
+import { GithubAuthProvider } from '@angular/fire/auth';
 import { Component, Input, OnInit } from '@angular/core';
 import { AuthService } from './../../services/auth.service';
 import { LoginUser } from 'src/app/models/login';
@@ -34,6 +35,12 @@ export class LoginComponent implements OnInit {
 
 signInWithGoogle() {
   this.auth.googleSignIn();
+}
+signInWithFacebook() {
+  this.auth.facebookSignIn();
+}
+signInWithGithub() {
+  this.auth.githubSignIn();
 }
 
 }
