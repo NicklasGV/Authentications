@@ -10,7 +10,8 @@ export const environment = {
     storageBucket: "management-auth-4dd9c.appspot.com",
     messagingSenderId: "832668573396",
     appId: "1:832668573396:web:c4c82cf00363527620e541",
-    measurementId: "G-JV1KF35NHF"
+    measurementId: "G-JV1KF35NHF",
+    apiUrl: "https://localhost:7068/api"
   },
   production: false,
   apiUrl: "https://localhost:7068/api"
