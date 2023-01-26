@@ -7,6 +7,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { AudioplayerComponent } from './components/audioplayer/audioplayer.component';
+import { WebshopComponent } from './components/webshop/webshop.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: 'verify-email', component: VerifyEmailComponent},
   {path: 'forgot-password', component: ForgotPasswordComponent},
   {path: 'player', component: AudioplayerComponent, canActivate: [AuthGuard]},
+  {path: 'webshop', component: WebshopComponent, canActivate: [AuthGuard]},
   { path: '**', redirectTo: ''}
 ];
 

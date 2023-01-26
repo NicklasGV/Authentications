@@ -44,6 +44,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 
 import { AuthInterceptor } from './services/auth-interceptor';
 import { AuthGuard } from './services/auth.guard';
+import { WebshopComponent } from './components/webshop/webshop.component';
 
 //#endregion
 
@@ -59,7 +60,8 @@ import { AuthGuard } from './services/auth.guard';
     EditHeroComponent,
     HeroListComponent,
     NavbarComponent,
-    AudioplayerComponent
+    AudioplayerComponent,
+    WebshopComponent
   ],
   imports: [
     BrowserModule,

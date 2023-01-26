@@ -19,13 +19,19 @@
         <li class="nav-item">
           <a class="nav-link" href="player">Player</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="webshop">Webshop</a>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle hidden-arrow" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Account
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li>
-              <a class="dropdown-item" (click)="register()" *ngIf="isLoggedIn == true">Logout</a>
+              <a class="dropdown-item" role="button" href="#"  style="color: black" (click)="register()" *ngIf="isLoggedIn == true">Logout</a>
+            </li>
+            <li>
+              <a class="dropdown-item" role="button" href="#" style="color: black" *ngIf="isLoggedIn == false">Not logged in</a>
             </li>
           </ul>
         </li>
