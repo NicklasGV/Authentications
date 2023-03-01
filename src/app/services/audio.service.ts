@@ -21,6 +21,7 @@ export class AudioService {
     currentTime: undefined,
     canplay: false,
     error: false,
+    currentSong: '',
   };
 
   private streamObservable(url: string) {
@@ -120,7 +121,8 @@ export class AudioService {
       duration: undefined,
       currentTime: undefined,
       canplay: false,
-      error: false
+      error: false,
+      currentSong: '',
     };
   }
 

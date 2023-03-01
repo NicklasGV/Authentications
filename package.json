@@ -1,12 +1,14 @@
 {
   "name": "auth-app",
   "version": "0.0.0",
+  "main": "index.hmtl",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "start": "ng serve --ssl true",
+    "lite": "lite-server --baseDir=dist/auth-app"
   },
   "private": true,
   "dependencies": {
@@ -44,6 +46,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
+    "lite-server": "^2.6.1",
     "postcss": "^8.4.20",
     "tailwindcss": "^3.2.4",
     "typescript": "~4.7.2"

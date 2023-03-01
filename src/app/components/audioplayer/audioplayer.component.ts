@@ -13,6 +13,7 @@ export class AudioplayerComponent {
   files: Array<any> = [];
   state?: StreamState;
   currentFile: any = {};
+  currentSong: string = '';
 
   constructor(private audioService: AudioService, cloudService: CloudService, public auth: AuthService) {
     // get media files
@@ -34,10 +35,12 @@ export class AudioplayerComponent {
     });
   }
 
-  openFile(file: { url: any; }, index: number) {
-    this.currentFile = { index, file };
+  openFile(file: { url: any; songName: string; }, index: number) {
+    this.currentFile = { index, file};
     this.audioService.stop();
     this.playStream(file.url);
+    this.currentSong = this.currentFile(file.songName)
+
   }
 
   pause() {
@@ -65,7 +68,7 @@ export class AudioplayerComponent {
   }
 
   isFirstPlaying() {
-    return this.currentFile.index === 0;
+    return this.currentFile.index === 0, this.currentSong;
   }
 
   isLastPlaying() {

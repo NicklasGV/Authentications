@@ -27,6 +27,9 @@
         </mat-toolbar-row>
   
         <mat-toolbar-row class="media-action-bar">
+
+          <p>Now playing {{ currentSong }}</p>
+
           <button mat-button [disabled]="isFirstPlaying()" (click)="previous()">
             <mat-icon mat-list-icon>skip_previous</mat-icon>
           </button>
